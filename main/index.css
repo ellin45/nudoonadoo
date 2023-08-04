@@ -1,36 +1,70 @@
-*{
-    box-sizing: border-box;
-    margin : 20px;
+* {
+  background-color: antiquewhite;
+  max-width: 1200px;
+  /* margin: 0 auto; */
 }
 
 header {
-        display: flex;
-        justify-content: center;
-        align-items: center; 
-        
-    }
-
-
+  display: flex;
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: blue;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.hamburger {
+    /* margin-left:auto; 제목과 햄버거 아이콘 사이의 공간을 최대로 확보 */
+    /* background-color: aqua; */
+  }
 .header_first {
-    font-size: 50px;
-    margin-right: auto;
-    margin-left: auto;  
+  font-size: 50px;
+  /* background-color: brown; */
+  margin: 0 auto;
 }
 
-
 .hamburger:hover svg {
-    fill: gray;
+  fill: gray;
 }
 
 .header_second {
-    display:flex;
-    justify-content: center;
-    font-size:50px;
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+  padding: 20px;
 }
 
-.header_third{
-    display:flex;
-    justify-content: space-between;
-    font-size: 30px;
+.header_third {
+  display: flex;
+  justify-content: space-between;
+  
+  font-size: 30px;
+  padding: 28px;
+  /* background-color: blue; */
 }
 
+.header_third > div {
+  margin-left: 20px;
+}
+
+.header_third > div:last-child {
+  margin-right: 20px;
+}
+
+.gray_line {
+  height: 1px;
+  width: 100%;
+  background-color: gray;
+  margin: 0;
+}
+
+.gray_line2 {
+  height: 1px;
+  width: 100%;
+  background-color: gray;
+  margin: 0;
+}
+
+.header_third:hover {
+  color: rgb(83, 82, 82);
+}
