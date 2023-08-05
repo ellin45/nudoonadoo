@@ -8,15 +8,12 @@ header {
   display: flex;
   box-sizing: border-box;
   padding: 20px;
-  background-color: blue;
+  /* background-color: blue; */
   justify-content: space-between;
   align-items: center;
   
 }
-.hamburger {
-    /* margin-left:auto; 제목과 햄버거 아이콘 사이의 공간을 최대로 확보 */
-    /* background-color: aqua; */
-  }
+
 .header_first {
   font-size: 50px;
   /* background-color: brown; */
