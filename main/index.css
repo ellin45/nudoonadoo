@@ -65,6 +65,13 @@ header {
   margin: 0;
 }
 
-.header_third:hover {
+.header_third_name:hover {
   color: rgb(83, 82, 82);
 }
+.header_third_todo:hover {
+  color: rgb(83, 82, 82);
+}
+.header_third_submit:hover {
+  color: rgb(83, 82, 82);
+}
+
