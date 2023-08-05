@@ -8,34 +8,17 @@ $(document).ready(function() {
         if (name === '' || todo === '') {
             alert('이름과 한일을 모두 입력하세요.');
         } else {
-            // 새로운 리스트 항목을 생성하고 data 속성을 추가합니다.
             var listItem = $("<li></li>")
-                .text(name + ": " + todo)
+                .text(`이름 : ${name}, 할일: ${todo}`)
                 .attr("data-name", name)
                 .attr("data-todo", todo);
 
-            // 리스트에 새로운 항목을 추가합니다.
             $("#comment_list").append(listItem);
-
-            // 입력창을 비웁니다.
             $("#name_input").val("");
             $("#todo_input").val("");
         }
     });
-});
 
-$(document).on("click", "#comment_list li", function() {
-    // 클릭한 항목의 데이터를 가져옵니다.
-    var name = $(this).attr("data-name");
-    var todo = $(this).attr("data-todo");
-
-    // 가져온 데이터를 칭찬 입력 창에 채워넣습니다.
-    $("#name_input_praise").val(name);
-    $("#praised_todo_input").val(todo);
-});
-
-
-$(document).ready(function() {
     $('#submit_button_praise').on('click', function(e) {
         e.preventDefault();
 
@@ -53,10 +36,15 @@ $(document).ready(function() {
             $('.praised_list').append(`<li>이름: ${name_praised}, 한일: ${todo},칭찬: ${praise}</li>`);
             $('#name_input_praise').val('');
             $('#praised_todo_input').val('');
+            $('#praise_input').val('');
         }
     });
 });
 
+$(document).on("click", "#comment_list li", function() {
+    var name = $(this).attr("data-name");
+    var todo = $(this).attr("data-todo");
 
-
-  
+    $("#name_input_praise").val(name);
+    $("#praised_todo_input").val(todo);
+});

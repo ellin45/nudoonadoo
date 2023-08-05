@@ -19,21 +19,8 @@
     <header>
    
       <div class="header_first">Nudoo Nadoo</div>
-      <p class="hamburger">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="60"
-          height="60"
-          fill="black"
-          class="bi bi-list"
-          viewBox="0 0 16 16"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
-          />
-        </svg>
-    </p>
+      
+   
     </header>
     
     <div class="gray_line"></div>
@@ -43,17 +30,6 @@
         </div>
         <div class="gray_line2"></div>
 
-        <div class="header_third">
-            <div class="header_third_name">
-                이름 
-            </div>
-            <div class="header_third_todo">
-                한일
-            </div>
-            <div class="header_third_submit">
-                등록
-            </div>
-        </div>
         
         <!-- input 창 : 댓글  -->
         <div class="insert_comment"> 
@@ -61,14 +37,14 @@
           <input type="text" id="name_input" class="name" placeholder="엘린">
 
           <label for="text" class="todo">한일</label>
-          <input type="text" id="todo_input" class="todo">
+          <input type="text" id="todo_input" class="todo" placeholder="한일">
 
           <button type="submit" id="submit_button" class="submit">등록</button>
         </div>
         
         <h2>한일 목록</h2>
-          <ul id="comment_list">
-          </ul>
+      <ul id="comment_list" class="styled_list">
+      </ul>
 
         <h2>서로를 칭찬해 보세요!</h2>
 
@@ -80,23 +56,19 @@
             <input type="text" id="praised_todo_input" >
 
             <label for="text" class="praise">칭찬</label>
-            <input type="text" id="praise_input" >
+            <input type="text" id="praise_input" placeholder="예쁜 말만 적어주세요">
             
 
             <button type="submit" id="submit_button_praise" class="submit">등록</button>
           </div>
 
-        <h2>내가 한 칭찬 목록</h2>
-
-        <ul>
-          <li class="praised_list"></li>
-        </ul>
+          <h2>내가 한 칭찬 목록</h2>
+          <ul class="praised_list styled_list">
+          </ul>
         
         
-        <h2>내게 한 칭찬 목록</h2>
-
-        <!-- 'my_praised_list'는 새로운 아이템을 추가할 리스트 그룹을 가리킵니다 -->
-          <ul class="my_praised_list">
+          <h2>내게 한 칭찬 목록</h2>
+          <ul class="my_praised_list styled_list">
           </ul>
 
 <!-- 등록 버튼 -->
