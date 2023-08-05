@@ -31,7 +31,7 @@ $(document).on("click", "#comment_list li", function() {
 
     // 가져온 데이터를 칭찬 입력 창에 채워넣습니다.
     $("#name_input_praise").val(name);
-    $("#praise_input").val("I appreciate you for " + todo);
+    $("#praised_todo_input").val(todo);
 });
 
 
@@ -40,30 +40,23 @@ $(document).ready(function() {
         e.preventDefault();
 
         const name_praised = $('#name_input_praise').val().trim();
+        const todo = $('#praised_todo_input').val().trim();
         const praise = $('#praise_input').val().trim();
 
-        if (name_praised === '' || praise === '') {
-            alert('이름과 칭찬 내용을 모두 입력하세요.');
+        if (name_praised === '' || praise === '' || todo === '') {
+            alert('이름과 칭찬, 한일 내용을 모두 입력하세요.');
         } else {
             if (name_praised === '엘린') {
-                $('.my_praised_list').append(`<li>이름: ${name_praised}, 칭찬: ${praise}</li>`);
+                $('.my_praised_list').append(`<li>이름: ${name_praised}, 한일: ${todo},칭찬: ${praise}</li>`);
             }
 
-            $('.praised_list').append(`<li>이름: ${name_praised}, 칭찬: ${praise}</li>`);
+            $('.praised_list').append(`<li>이름: ${name_praised}, 한일: ${todo},칭찬: ${praise}</li>`);
             $('#name_input_praise').val('');
-            $('#praise_input').val('');
+            $('#praised_todo_input').val('');
         }
     });
 });
 
 
-$(document).on("click", "#comment_list li", function() {
-    // 클릭한 항목의 데이터를 가져옵니다.
-    let name = $(this).attr("data-name");
-    let todo = $(this).attr("data-todo");
-  
-    // 가져온 데이터를 칭찬 입력 창에 채워넣습니다.
-    $("#name_input_praise").val(name);
-    $("#praise_input").val(todo);
-  });
+
   
