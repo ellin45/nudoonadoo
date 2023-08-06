@@ -4,7 +4,9 @@
   box-sizing: border-box;
   padding: 20px;
 }
-
+h2 {
+  font-size: 50px;
+}
 body {
   margin: 0 auto;
   font-family: Arial, sans-serif;
@@ -67,7 +69,7 @@ button:hover {
 }
 
 ul li {
-  font-size:30px;
+  font-size:40px;
   background-color: #FFE4B5;  
   color: #8B4513;               
   border: 1px solid #FF8C00;   
