@@ -9,9 +9,10 @@ $(document).ready(function() {
             alert('이름과 한일을 모두 입력하세요.');
         } else {
             var listItem = $("<li></li>")
-                .text(`이름 : ${name}, 할일: ${todo}`)
-                .attr("data-name", name)
-                .attr("data-todo", todo);
+            .html(`이름 : ${name}　<br>할일: ${todo}`) 
+            .attr("data-name", name)
+            .attr("data-todo", todo);
+        
 
             $("#comment_list").append(listItem);
             $("#name_input").val("");
@@ -30,10 +31,10 @@ $(document).ready(function() {
             alert('이름과 칭찬, 한일 내용을 모두 입력하세요.');
         } else {
             if (name_praised === '엘린') {
-                $('.my_praised_list').append(`<li>이름: ${name_praised}, 한일: ${todo},칭찬: ${praise}</li>`);
+                $('.my_praised_list').append(`<li>이름: ${name_praised}<br>한일: ${todo}<br>칭찬: ${praise}</li>`);
             }
 
-            $('.praised_list').append(`<li>이름: ${name_praised}, 한일: ${todo},칭찬: ${praise}</li>`);
+            $('.praised_list').append(`<li>이름: ${name_praised}<br>한일: ${todo}<br>칭찬: ${praise}</li>`);
             $('#name_input_praise').val('');
             $('#praised_todo_input').val('');
             $('#praise_input').val('');
