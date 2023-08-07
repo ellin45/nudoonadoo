@@ -1,15 +1,23 @@
 * {
-  background-color: white;
-  max-width: 1200px;
   box-sizing: border-box;
   padding: 20px;
 }
+
+.container {
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+
+}
+
 h2 {
   font-size: 50px;
 }
 body {
   margin: 0 auto;
   font-family: Arial, sans-serif;
+  /* display:flex;
+  justify-content: center; */
 }
 
 header {
@@ -44,14 +52,13 @@ header {
 }
 
 /* Add these styles for the button and input elements */
-input[type=text] {
+input[type='text'] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
   border: 2px solid orange;
   border-radius: 4px;
- 
 }
 
 button {
@@ -69,19 +76,18 @@ button:hover {
 }
 
 ul li {
-  font-size:40px;
-  background-color: #FFE4B5;  
-  color: #8B4513;               
-  border: 1px solid #FF8C00;   
-  padding: 10px;             
-  margin-bottom: 10px;       
-  border-radius: 5px;       
-  list-style-type: none;    
-  
+  font-size: 40px;
+  background-color: #ffe4b5;
+  color: #8b4513;
+  border: 1px solid #ff8c00;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  list-style-type: none;
 }
 
 ul li:hover {
-  background-color: #FFA07A;  
+  background-color: #ffa07a;
 }
 
 .insert_comment {
@@ -91,13 +97,14 @@ ul li:hover {
   gap: 10px;
   justify-content: space-between;
   align-items: baseline;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   padding: 10px;
 }
 
-
-#comment_list.styled_list li, .praised_list.styled_list li, .my_praised_list.styled_list li {
-  background-color: peachpuff; 
+#comment_list.styled_list li,
+.praised_list.styled_list li,
+.my_praised_list.styled_list li {
+  background-color: peachpuff;
   padding: 5px;
   margin: 5px 0;
   border-radius: 5px;
@@ -112,4 +119,16 @@ ul li:hover {
 
 .submit:hover {
   background-color: darkorange;
+}
+/* 768px 이하 */
+@media (max-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+/* 992px 이상 */
+@media (min-width: 992px) {
+  .container {
+    max-width: 992px;
+  }
 }
